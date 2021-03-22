@@ -28,6 +28,7 @@ import Tooltip from '../Tooltip';
 
 function Sidebar() {
     const [menuExpanded, setMenuExpanded] = useState(false);
+    const [showTopHeaderContent, setShowTopHeaderContent] = useState(false);
 
     function handleMultiMenuClick() {
         setMenuExpanded(!menuExpanded);
@@ -41,6 +42,10 @@ function Sidebar() {
         if (menuExpanded) {
             setMenuExpanded(false);
         }
+    }
+
+    function toggleTopHeaderContent() {
+        setShowTopHeaderContent(!showTopHeaderContent);
     }
 
     return (
@@ -64,14 +69,25 @@ function Sidebar() {
                 <SidebarExpansion
                     className={menuExpanded ? 'expanded' : undefined}
                 >
-                    <ExpansionHeader>
+                    <ExpansionHeader
+                        className={
+                            showTopHeaderContent ? '--show-content' : undefined
+                        }
+                    >
                         <small>CANAL</small>
                         <p>PD1 - O PODER DA AÇÃO FAÇA AGORA MESMO</p>
-                        <img
-                            src={arrowDownIcon}
-                            alt="Mostrar Mais"
-                            className=""
-                        />
+                        <button
+                            onClick={toggleTopHeaderContent}
+                            className={
+                                showTopHeaderContent ? '--up' : undefined
+                            }
+                        >
+                            <img
+                                src={arrowDownIcon}
+                                alt="Mostrar Mais"
+                                className=""
+                            />
+                        </button>
                     </ExpansionHeader>
                     <ExpansionList>
                         <ul>

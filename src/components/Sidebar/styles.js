@@ -8,7 +8,8 @@ export const SidebarWrapper = styled.div`
     transition: all 0.5s ease-in-out;
 
     @media (max-width: 800px) {
-        transform: translateX(-200px);
+        transform: translateX(-100%);
+        visibility: hidden;
     }
 `;
 
@@ -146,18 +147,34 @@ export const ExpansionHeader = styled.div`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        width: 170px;
-        font-size: 16px;
+        max-width: 155px;
+        font-size: clamp(12px, 0.2em + 1vw, 1em);
         color: #ff8f63;
         font-weight: bold;
     }
 
-    img {
+    button {
+        background-color: transparent;
+        border: 0;
+        outline: none;
         position: absolute;
         right: 4px;
-        top: 28px;
-        &.up {
+        top: 25px;
+        padding: 3px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &.--up {
             transform: rotate(180deg);
+        }
+    }
+
+    &.--show-content {
+        height: initial;
+
+        p {
+            white-space: normal;
+            text-overflow: initial;
         }
     }
 `;
