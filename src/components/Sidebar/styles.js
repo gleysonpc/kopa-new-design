@@ -4,8 +4,9 @@ export const SidebarWrapper = styled.div`
     padding: 25px 12px;
     height: 100vh;
     width: 100px;
-    position: relative;
+    position: fixed;
     transition: all 0.5s ease-in-out;
+    background-color: #282b3a;
 
     @media (max-width: 800px) {
         transform: translateX(-100%);
@@ -111,23 +112,33 @@ export const SidebarMenuTop = styled.div``;
 export const SidebarMenuBottom = styled.div``;
 
 export const SidebarExpansion = styled.div`
-    width: 0px;
+    width: 70px;
     height: calc(100% - 50px);
     border-radius: 18px;
     -webkit-box-shadow: 0px 0px 10px -4px #000000;
     box-shadow: 0px 0px 10px -4px #000000;
     z-index: 100;
     position: absolute;
-    left: 60px;
+    left: 0px;
     z-index: 1;
     background-color: #272636;
     transition: all 500ms ease-in-out;
     opacity: 0;
     padding: 17px 24px 17px 40px;
 
+    li {
+        transform: scaleX(0);
+        transition: all 500ms ease-in-out;
+    }
+
     &.expanded {
-        width: 250px;
         opacity: 1;
+        width: 250px;
+        transform: translateX(60px);
+
+        li {
+            transform: scaleX(1);
+        }
     }
 `;
 

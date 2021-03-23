@@ -12,11 +12,11 @@ import {
     ExpansionList,
     SidebarToggler,
 } from './styles';
-import logoIcon from '../../assets/logo.svg';
+import logoIcon from '../../assets/logo-kopa.svg';
 import homeIcon from '../../assets/home-icon.svg';
 import configIcon from '../../assets/config-icon.svg';
-import arrowDownIcon from '../../assets/arrow-down.svg';
-import arrowRightIcon from '../../assets/arrow-right.svg';
+import arrowDownIcon from '../../assets/arrow-down-icon.svg';
+import arrowRightIcon from '../../assets/arrow-right-icon.svg';
 import notificationIcon from '../../assets/notification-icon.svg';
 import videoIcon from '../../assets/video-icon.svg';
 import userIcon from '../../assets/user-icon.svg';

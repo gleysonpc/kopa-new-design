@@ -6,7 +6,7 @@ import {
     DropdownList,
     LanguageSectionContainer,
 } from './styles';
-import arrowDownIcon from '../../assets/arrow-down.svg';
+import arrowDownIcon from '../../assets/arrow-down-icon.svg';
 
 const dropdownItems = [
     {

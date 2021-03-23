@@ -6,7 +6,7 @@ import Searchbar from '../Searchbar';
 import SelectLanguage from '../SelectLanguage';
 import UserSection from '../UserSection';
 import MenuButton from '../MenuButton';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo-kopa.svg';
 import homeIcon from '../../assets/home-icon.svg';
 import configIcon from '../../assets/config-icon.svg';
 import notificationIcon from '../../assets/notification-icon.svg';
